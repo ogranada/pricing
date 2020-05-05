@@ -1,0 +1,9 @@
+
+.container {
+  height: 100vh;
+  background: url("../images/bg-top.svg"), url("../images/bg-bottom.svg");
+  background-color: $Very_Light_Grayish_Blue;
+  background-repeat: no-repeat;
+  background-position: calc(100vw - 12em) -2em, bottom left;
+  text-align: center;
+}

@@ -1,0 +1,77 @@
+
+:root {
+    --btn-height: 28px;
+    --btn-width: calc(var(--btn-height) * 1.8);
+    --btn-circle: calc(var(--btn-height) - 0.5em);
+    --btn-circle-space: calc(var(--btn-circle) * 0.05);
+    --btn-circle-translation: calc(var(--btn-width) - var(--btn-circle) * 1.5);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  height: var(--btn-height);
+  width: var(--btn-width);
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: var(--btn-height);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: var(--btn-circle);
+  width: var(--btn-circle);
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+#price:checked + main .switch > .slider {
+  background-color: #2196f3;
+}
+
+#price:focus + main .switch > .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+#price:checked + main .switch > .slider:before {
+  -webkit-transform: translateX(var(--btn-circle-translation));
+  -ms-transform: translateX(var(--btn-circle-translation));
+  transform: translateX(var(--btn-circle-translation));
+}
+
+#price {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#price + main .switch > .slider {
+  background: $Linear_Gradient_H;
+}
+
+#price + main .PriceCard-monthPrice {
+  display: none;
+}
+
+#price:checked + main .PriceCard-monthPrice {
+  display: inline;
+}
+#price:checked + main .PriceCard-anualPrice {
+  display: none;
+}

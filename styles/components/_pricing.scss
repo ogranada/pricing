@@ -1,0 +1,34 @@
+
+.Pricing {
+    padding: 1em 0 5em 0;
+  
+    &-title,
+    &-periodicityText {
+      @include font();
+    }
+  
+    &-title {
+      margin: 0;
+      color: $Grayish_Blue;
+      padding: 2em 0 1em 0;
+      font-size: 2em;
+    }
+  
+    &-periodicityText {
+      color: $Light_Grayish_Blue;
+      font-weight: bold;
+      font-size: 14px;
+    }
+  
+    &-periodicity {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    &-slider {
+      margin: 0 1em;
+    }
+  }
+  

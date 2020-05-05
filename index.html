@@ -1,52 +1,117 @@
 <!DOCTYPE html>
-<html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | [Pricing page]</title>
 
-  Our Pricing
-  Annually
-  Monthly
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
 
-  Basic
-  &dollar;19.99
-  &dollar;199.99
-  500 GB Storage
-  2 Users Allowed
-  Send up to 3 GB
-  Learn More
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="price" />
+    <main class="container">
+      <section class="Pricing">
+        <h1 class="Pricing-title">Our Pricing</h1>
+        <section class="Pricing-periodicity">
+          <span class="Pricing-periodicityText">Annually</span>
+          <label class="Pricing-slider switch" for="price">
+            <label class="slider" for="price"></label>
+          </label>
+          <span class="Pricing-periodicityText">Monthly</span>
+        </section>
+      </section>
+      <section class="CardsContainer">
+        <section class="PriceCard">
+          <h2 class="PriceCard-title">Basic</h2>
+          <ul class="PriceCard-list">
+            <li class="PriceCard-listItem">
+              <span class="PriceCard-ammount PriceCard-monthPrice">19.99</span>
+              <span class="PriceCard-ammount PriceCard-anualPrice">199.99</span>
+            </li>
+            <li class="PriceCard-listItem">
+              500 GB Storage
+            </li>
+            <li class="PriceCard-listItem">
+              2 Users Allowed
+            </li>
+            <li class="PriceCard-listItem">
+              Send up to 3 GB
+            </li>
+            <li class="PriceCard-listItem">
+              <button class="PriceCard-button">Learn More</button>
+            </li>
+          </ul>
+        </section>
 
-  Professional
-  &dollar;24.99
-  &dollar;249.99
-  1 TB Storage
-  5 Users Allowed
-  Send up to 10 GB
-  Learn More
+        <section class="PriceCard">
+          <h2 class="PriceCard-title">Professional</h2>
+          <ul class="PriceCard-list">
+            <li class="PriceCard-listItem">
+              <span class="PriceCard-ammount PriceCard-monthPrice">24.99</span>
+              <span class="PriceCard-ammount PriceCard-anualPrice">249.99</span>
+            </li>
+            <li class="PriceCard-listItem">
+              1 TB Storage
+            </li>
+            <li class="PriceCard-listItem">
+              5 Users Allowed
+            </li>
+            <li class="PriceCard-listItem">
+              Send up to 10 GB
+            </li>
+            <li class="PriceCard-listItem">
+              <button class="PriceCard-button">Learn More</button>
+            </li>
+          </ul>
+        </section>
 
-  Master
-  &dollar;39.99
-  &dollar;399.99
-  2 TB Storage
-  10 Users Allowed
-  Send up to 20 GB
-  Learn More
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <section class="PriceCard">
+          <h2 class="PriceCard-title">Master</h2>
+          <ul class="PriceCard-list">
+            <li class="PriceCard-listItem">
+              <span class="PriceCard-ammount PriceCard-monthPrice">39.99</span>
+              <span class="PriceCard-ammount PriceCard-anualPrice">399.99</span>
+            </li>
+            <li class="PriceCard-listItem">
+              2 TB Storage
+            </li>
+            <li class="PriceCard-listItem">
+              10 Users Allowed
+            </li>
+            <li class="PriceCard-listItem">
+              Send up to 20 GB
+            </li>
+            <li class="PriceCard-listItem">
+              <button class="PriceCard-button">Learn More</button>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </main>
+
+  </body>
 </html>

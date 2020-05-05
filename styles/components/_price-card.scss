@@ -1,0 +1,72 @@
+.PriceCard {
+  background-color: white;
+  width: calc(100vw - 3em);
+  margin: 1.5em;
+  margin-left: 1.5em;
+  padding: 2em;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0 0 5px $Light_Grayish_Blue;
+  transition: all 1s ease;
+
+  &-title {
+    color: $Grayish_Blue;
+    @include font();
+  }
+
+  &-ammount {
+    @include font();
+    font-weight: bold;
+    font-size: 3em;
+    color: $Dark_Grayish_Blue;
+
+    &::before {
+      content: "$";
+      font-size: 0.6em;
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      bottom: 0.15em;
+    }
+  }
+
+  &-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &-listItem {
+    padding: 1em 0;
+  }
+
+  &-listItem:not(:last-child) {
+    @include font();
+    border-bottom: 1px solid $Light_Grayish_Blue;
+  }
+
+  &-button {
+    background: $Linear_Gradient_H;
+    width: 100%;
+    border: none;
+    color: white;
+    padding: 1em;
+    font-size: 1em;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 1s ease;
+  }
+
+  &:hover {
+    background: $Linear_Gradient_V;
+  }
+  &:hover &-button {
+    background: white;
+    color: $Purple;
+  }
+  &:hover &-title,
+  &:hover &-ammount,
+  &:hover &-listItem {
+    color: white;
+  }
+}

@@ -5,9 +5,11 @@
   margin-left: 1.5em;
   padding: 2em;
   box-sizing: border-box;
-  border-radius: 5px;
-  box-shadow: 0 0 5px $Light_Grayish_Blue;
-  transition: all 1s ease;
+  border-radius: 0.7em;
+  box-shadow: 0 0.5em 3em -1em $Light_Purple;
+  transition: width 1s ease;
+  transition: height 1s ease;
+  transition: background 1s ease;
 
   &-title {
     color: $Grayish_Blue;
@@ -54,19 +56,34 @@
     text-transform: uppercase;
     border-radius: 5px;
     font-weight: bold;
-    transition: all 1s ease;
+    
   }
 
-  &:hover {
+  &:nth-child(2n) {
     background: $Linear_Gradient_V;
   }
-  &:hover &-button {
+  &:nth-child(2n) &-button {
     background: white;
-    color: $Purple;
+    color: $Dark_Purple;
   }
-  &:hover &-title,
-  &:hover &-ammount,
-  &:hover &-listItem {
+  &:nth-child(2n) &-title,
+  &:nth-child(2n) &-ammount,
+  &:nth-child(2n) &-listItem {
     color: white;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    margin: 0;
+    justify-content: center;
+
+    &:nth-child(2n) {
+      max-width: 22vw;
+      padding: 3em 2em;
+    }
+
+    &:not(:nth-child(2n)) {
+      max-width: 20vw;
+      padding: 2em 1em;
+    }
   }
 }

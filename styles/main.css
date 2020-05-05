@@ -16,6 +16,22 @@ body {
   text-align: center;
 }
 
+@media screen and (min-width: 1024px) {
+  .CardsContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 66vw;
+    margin-left: 17vw;
+  }
+}
+
 :root {
   --btn-height: 28px;
   --btn-width: calc(var(--btn-height) * 1.8);
@@ -141,11 +157,15 @@ body {
   padding: 2em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 0 5px #b3b5c6;
-          box-shadow: 0 0 5px #b3b5c6;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  border-radius: 0.7em;
+  -webkit-box-shadow: 0 0.5em 3em -1em #a3a8f0;
+          box-shadow: 0 0.5em 3em -1em #a3a8f0;
+  -webkit-transition: width 1s ease;
+  transition: width 1s ease;
+  -webkit-transition: height 1s ease;
+  transition: height 1s ease;
+  -webkit-transition: background 1s ease;
+  transition: background 1s ease;
 }
 
 .PriceCard-title {
@@ -194,23 +214,38 @@ body {
   text-transform: uppercase;
   border-radius: 5px;
   font-weight: bold;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
 }
 
-.PriceCard:hover {
+.PriceCard:nth-child(2n) {
   background: -webkit-gradient(linear, left top, left bottom, from(#a3a8f0), to(#696fdd));
   background: linear-gradient(180deg, #a3a8f0, #696fdd);
 }
 
-.PriceCard:hover .PriceCard-button {
+.PriceCard:nth-child(2n) .PriceCard-button {
   background: white;
   color: #696fdd;
 }
 
-.PriceCard:hover .PriceCard-title,
-.PriceCard:hover .PriceCard-ammount,
-.PriceCard:hover .PriceCard-listItem {
+.PriceCard:nth-child(2n) .PriceCard-title,
+.PriceCard:nth-child(2n) .PriceCard-ammount,
+.PriceCard:nth-child(2n) .PriceCard-listItem {
   color: white;
+}
+
+@media screen and (min-width: 1024px) {
+  .PriceCard {
+    margin: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .PriceCard:nth-child(2n) {
+    max-width: 22vw;
+    padding: 3em 2em;
+  }
+  .PriceCard:not(:nth-child(2n)) {
+    max-width: 20vw;
+    padding: 2em 1em;
+  }
 }
 /*# sourceMappingURL=main.css.map */
